@@ -4,6 +4,8 @@ This is a repository containing the source code from a blog post that I wrote on
 ## What's this all about?
 You can find more information in my blog post here, but I'll provide a brief synopsis. Several open source forensics toolkits give investigators the option to perform remote memory captures. This is a very powerful forensics mechanism, and the remote aspect is very important now that administrators can't simply drive to the office and plug a write blocker into something hosted in a datacenter across the country. Some of these forensics tools utilize a driver, specifically winpmem, to perform the actual memory capture. By combining a kernel driver and userland process (this could be done with just a driver, but I'm not good with C++) it's possible to inspect new processes and inject a hooking mechanism into them to watch for driver loads. By blocking a potential forensics driver load, it can inform an operator that this host is burnt or be used to perform automated cleanup.
 
+To be clear, this is NOT a rootkit. It's a simple proof of concept for monitoring processes and injecting into them from userland to perform hooking on driver loads. 
+
 ## What all is in this repository?
 
 ### ProcessMonitorDriver

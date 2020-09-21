@@ -25,5 +25,8 @@ Usage: DriverLoader.exe C:\Path\To\Driver
 ### TargetDriver
 This is a very simple "Hello World" driver that can be used in conjunction with DriverLoader for very basic driver loading/unloading. Literally just prints hello world.
 
-### Disclaimer
+## Notes
+The architectures in this project are pretty finicky. You will need to use ProcessMonitorDriver in x64, DriverHooker in x86, and CppInjector in x86. TargetDriver and DriverLoader are both x64.
+
+## Disclaimer
 This code is so poorly written and spaghetti'd that you would be hard pressed to use it maliciously, but please do not try. This was created for educational purposes only.
